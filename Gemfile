@@ -10,7 +10,6 @@ gem 'pg'
 
 gem 'slim-rails'
 gem 'sass-rails'
-gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'coffee-rails'
 gem 'simple_form'

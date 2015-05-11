@@ -1,0 +1,29 @@
+.site-footer {
+  $footer-height: 32px;
+  flex: none;
+
+  &__wrapper {
+    padding: $footer-height;
+    background: $dark-grey;
+    color: $light-grey;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.site-footer__credits {
+  margin: 0;
+  padding: 0;
+
+  &__credit {
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
+
+.credit {
+
+  &--accent {
+    color: $light-blue;
+  }
+}

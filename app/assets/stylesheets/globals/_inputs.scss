@@ -1,0 +1,23 @@
+.input-group {
+  $padding: 5px 12px;
+  $border: 1px solid rgba(147,128,108,.25);
+  display: flex;
+  margin-bottom: 24px;
+
+  span {
+    border-radius: 2px 0 0 2px;
+    border: $border;
+    padding: $padding;
+    background-color: rgba(147,128,108,.1);
+    color: #666;
+    font: inherit;
+    font-weight: 400;
+  }
+
+  input {
+    flex: 1;
+    padding: $padding;
+    border: $border;
+    border-radius: 0 2px 2px 0;
+  }
+}

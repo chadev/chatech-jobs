@@ -1,0 +1,37 @@
+.content {
+  flex: 1;
+  padding: 5px;
+
+  .title {
+    $title-color: #565656;
+    color: $title-color;
+    margin: 10px 0;
+
+    @media (min-width: $large-screen) {
+      margin: 22px 0;
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .content {
+    padding-top: 34px;
+  }
+
+}
+
+.center {
+  max-width: $main-content-width;
+  margin: 0 auto;
+
+  .content {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    background: $white;
+    border-radius: 3px;
+    border: 1px solid #DDD;
+    display: flex;
+    flex-direction: column;
+  }
+}

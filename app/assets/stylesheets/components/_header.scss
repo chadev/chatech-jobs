@@ -1,0 +1,42 @@
+.header {
+  flex: none;
+  background: $dark-grey;
+
+  .banner {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    max-width: $main-content-width;
+    margin: 0 auto;
+
+    .title {
+      display: flex;
+      align-items: baseline;
+
+      .logo {
+        margin: 0;
+        color: $light-grey;
+        font-size: 26px;
+
+        &--accent {
+          font-weight: lighter;
+          color: white;
+        }
+      }
+    }
+
+    .actions {
+      flex: 1;
+      justify-content: flex-end;
+      font-size: .9em;
+      flex-direction: row;
+      display: flex;
+    }
+  }
+}
+
+.header__border {
+  flex: none;
+  background: $light-blue;
+  min-height: 8px;
+}
