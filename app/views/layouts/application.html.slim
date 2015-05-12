@@ -1,7 +1,7 @@
 doctype 5
 html
   head
-    title Chatech Jobs
+    title Chadev+Jobs
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tag
@@ -12,10 +12,11 @@ html
       = render("layouts/header")
 
       main.content
-        - flash.each do |name, msg|
-          .alert.alert-dismissable class=alert_class(name)
-            button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
-            =raw(msg)
-        = yield
+        .center
+          - flash.each do |name, msg|
+            .alert.alert-dismissable class=alert_class(name)
+              button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
+              =raw(msg)
+          = yield
 
       = render("layouts/footer")

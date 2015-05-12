@@ -17,6 +17,9 @@ gem 'uglifier'
 
 gem 'awesome_print'
 
+gem 'devise'
+gem 'activeadmin', '~> 1.0.0.pre1'
+
 group :production, :acceptance do
   gem 'rack-timeout'
   gem 'rails_stdout_logging'
