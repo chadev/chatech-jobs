@@ -14,6 +14,7 @@
   &:hover {
     background: rgba(224, 243, 255, 0.59);
     border-left: $border-size solid $light-blue;
+    border-radius: 2px;
   }
 
   @media (min-width: $large-screen) {
