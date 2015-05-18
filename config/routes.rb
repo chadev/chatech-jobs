@@ -5,7 +5,7 @@ ChatechJobs::Application.routes.draw do
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  root to: 'pages#root'
+  root to: 'jobs#index'
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
 end

@@ -1,6 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe JobPosting, type: :model do
+  describe ".current_jobs" do
+    it "should only return jobs created in the last 90 days" do
+      old_job = create(:job_posting, created_at: Date.current - 91.days)
+      new_job = create(:job_posting)
+      expect(JobPosting.current_jobs).to eq [new_job]
+    end
+
+    it "should be ordered by most recent" do
+      new_job = create(:job_posting, created_at: Date.current - 10.days)
+      newer_job = create(:job_posting, created_at: Date.current)
+      expect(JobPosting.current_jobs).to eq [newer_job, new_job]
+    end
+  end
+
   describe "#posted_at" do
     it "should return a string of when the job was posted" do
       job = create(:job_posting, :created_at => Date.new(2015, 5, 13))

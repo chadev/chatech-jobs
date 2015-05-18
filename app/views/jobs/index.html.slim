@@ -1,0 +1,13 @@
+#job.job-posting
+  - @jobs.each do |job|
+    .job
+      .job__info
+        = link_to job.title, job_path(job), class: 'job__description'
+        .job__source
+          p.job__source__company=job.company
+          p.job__availability=job.availability
+      .job__meta
+        p.job__posted-on=job.posted_at
+
+.side-bar
+  div Social Links Go Here
