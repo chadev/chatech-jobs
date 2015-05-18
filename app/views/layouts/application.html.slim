@@ -15,11 +15,10 @@ html
       = render("layouts/header")
 
       main.content
-        .center
-          - flash.each do |name, msg|
-            .alert.alert-dismissable class=alert_class(name)
-              button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
-              =raw(msg)
-          = yield
+        - flash.each do |name, msg|
+          .alert.alert-dismissable class=alert_class(name)
+            button.close type='button' data-dismiss='alert' aria-hidden='true' &times;
+            =raw(msg)
+        = yield
 
       = render("layouts/footer")

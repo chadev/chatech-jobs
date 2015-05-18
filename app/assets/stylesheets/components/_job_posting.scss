@@ -1,5 +1,14 @@
 .job-posting {
   $padding: 20px;
+  @include box;
+  @include hover-over-top;
+
+  margin-bottom: 8px;
+
+  @media screen and (min-width: $large-screen) {
+    flex: none !important;
+    width: 70%;
+  }
 
   &__header {
     padding: $padding;

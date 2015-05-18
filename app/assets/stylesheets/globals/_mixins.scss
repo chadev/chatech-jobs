@@ -1,0 +1,12 @@
+@mixin box {
+  background: $white;
+  border-radius: 1px;
+  border: 1px solid #DDD;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+@mixin hover-over-top {
+  @media screen and (min-width: $large-screen) {
+    margin-top: -100px;
+  }
+}
