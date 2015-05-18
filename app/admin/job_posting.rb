@@ -1,5 +1,11 @@
 ActiveAdmin.register JobPosting do
-  permit_params :title, :description, :how_to_apply, :full_time
+  permit_params(
+    :title,
+    :description,
+    :how_to_apply,
+    :full_time,
+    :company
+  )
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
