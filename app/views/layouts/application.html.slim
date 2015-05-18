@@ -1,11 +1,14 @@
 doctype 5
 html
   head
+    meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
     title Chadev+Jobs
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
+    script src="//use.typekit.net/los3oyi.js"
+    javascript:
+      try{Typekit.load();}catch(e){}</script>
     = csrf_meta_tag
-    meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
 
   body id=(controller.controller_name) class=(controller.action_name)
     .content-wrapper

@@ -38,5 +38,9 @@
 .header__border {
   flex: none;
   background: $light-blue;
-  min-height: 8px;
+  min-height: 12px;
+
+  @media (min-width: $large-screen) {
+    min-height: 188px;
+  }
 }

@@ -2,6 +2,10 @@
   flex: 1;
   padding: 5px;
 
+  @media (min-width: $large-screen) {
+    padding: 5px;
+  }
+
   .title {
     $title-color: #565656;
     color: $title-color;
@@ -24,8 +28,12 @@
   max-width: $main-content-width;
   margin: 0 auto;
 
+  @media (min-width: $large-screen) {
+    margin-top: -122px;
+  }
+
   .content {
-    padding: 0;
+    padding: 12px 0 0 0;
     list-style: none;
     margin: 0;
     background: $white;
@@ -33,5 +41,6 @@
     border: 1px solid #DDD;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   }
 }
