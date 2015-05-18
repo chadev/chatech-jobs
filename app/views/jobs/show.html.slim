@@ -1,0 +1,8 @@
+#job.content.job-posting
+  .job-posting__header
+    h1.job-title=@job.title
+    span.job-posting-date=@job.posted_at
+    span.job-availability=@job.availability
+
+  .job-posting__description
+    div==markdown @job.description

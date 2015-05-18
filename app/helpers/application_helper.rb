@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def markdown(text)
+    Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(text)
+  end
+
   # create text with an icon to the left for bootstrap menus and buttons
   def text_with_icon(text, icon_name)
     raw("#{icon(icon_name)} #{text}")

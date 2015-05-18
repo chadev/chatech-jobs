@@ -1,0 +1,29 @@
+.job-posting {
+  $padding: 20px;
+
+  &__header {
+    padding: $padding;
+    border-bottom: 1px solid #ccc;
+
+    .job-title {
+      margin: 0;
+    }
+
+    .job-posting-date {
+      margin: 0;
+      color: $accent-dark-grey;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .job-availability {
+      margin-left: 18px;
+      color: $green;
+      font-weight: bold;
+    }
+  }
+
+  &__description {
+    padding: $padding;
+  }
+}
