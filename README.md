@@ -1,6 +1,6 @@
 # Chatech Jobs
 
-...
+[![Build Status](https://travis-ci.org/chadev/chatech-jobs.svg?branch=master)](https://travis-ci.org/chadev/chatech-jobs)
 
 Generated with [Raygun](https://github.com/carbonfive/raygun).
 
@@ -93,11 +93,11 @@ Guard is configured to run ruby and jasmine specs, and also listen for livereloa
 
 Learn more at [mailcatcher.me](http://mailcatcher.me/). And please don't add mailcatcher to the Gemfile.
 
-### Continuous Integration and Deployment with CircleCI
+### Continuous Integration and Deployment with Travis CI
 
-This project is configured for continuous integration and deployment with CircleCI and Heroku.
+This project is configured for continuous integration and deployment with Travis CI and Heroku.
 
-Check out [circle.yml](circle.yml) and [bin/deploy.sh](bin/deploy.sh) for details.
+Check out [.travis.yml](.travis.yml) and [bin/deploy.sh](bin/deploy.sh) for details.
 
 # Server Environments
 
@@ -126,4 +126,4 @@ Several common features and operational parameters can be set using environment 
 ### Third Party Services
 
 * Heroku for hosting.
-* CircleCI for continuous integration and deployment.
+* Travis CI for continuous integration and deployment.
