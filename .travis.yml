@@ -1,0 +1,4 @@
+language: ruby
+
+before_script: rake db:test:prepare
+script: rake && rake db:sample_data
