@@ -1,12 +1,24 @@
 .side-bar {
   @include box;
   @include hover-over-top;
-  flex: 1;
+
   padding: 20px;
   min-height: 120px;
+  flex: 2;
+  height: 0%;
 
   @media screen and (min-width: $large-screen) {
     max-width: 340px;
     margin-left: 20px;
+    flex: 0 0 300px;
+  }
+}
+
+.side-bar .how-to-apply {
+  h1 {
+    font-weight: normal;
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 22px;
   }
 }

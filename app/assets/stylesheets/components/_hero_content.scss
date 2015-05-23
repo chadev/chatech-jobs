@@ -1,0 +1,25 @@
+.hero-content {
+  display: none;
+
+  @media screen and (min-width: $large-screen) {
+    display: block;
+    position: absolute;
+    top: -42px;
+  }
+}
+
+a.hero-content {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1.hero-content {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+}

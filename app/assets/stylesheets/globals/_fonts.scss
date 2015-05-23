@@ -2,15 +2,11 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  // font-family: "brandon-grotesque",sans-serif;
-  // font-style: normal;
-  // font-weight: 400;
+  color: $base-font-color;
+  text-rendering: optimizeLegibility;
 }
 
-
-b {
-  // font-family: "brandon-grotesque",sans-serif;
-  // font-style: normal;
-  // font-weight: 700;
+p {
+  font-size: $base-font-size;
+  line-height: $base-font-size * $base-line-height;
 }
-

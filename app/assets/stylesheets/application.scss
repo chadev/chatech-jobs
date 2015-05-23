@@ -2,22 +2,15 @@
 @import "globals/fonts";
 @import "globals/base";
 @import "globals/links";
+@import "globals/buttons";
 @import "globals/inputs";
 @import "globals/mixins";
-
-@import "atoms/job_description";
-@import "atoms/how_to_apply";
 
 @import "components/header";
 @import "components/footer";
 @import "components/job_posting";
+@import "components/job";
 @import "components/side_bar";
-
-@import "molecules/alerts";
+@import "components/hero_content";
 
 @import "sections/content";
-@import "sections/jobs";
-@import "sections/job_posting";
-
-@import "shared/button";
-
