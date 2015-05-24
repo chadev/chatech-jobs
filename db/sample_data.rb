@@ -9,3 +9,12 @@
 #
 # Data that is required by the application across all environments (i.e. reference data) should _not_ be included here.
 # That belongs in seeds.rb instead.
+
+require 'ffaker'
+20.times do |i|
+  JobPosting.create(title: FFaker::Job.title,
+                    description: FFaker::HipsterIpsum.paragraphs(num=2).join(' '),
+                    how_to_apply: FFaker::HipsterIpsum.sentences(num=1)[0],
+                    full_time: [true, false].sample,
+                    company: FFaker::Company.name)
+end
