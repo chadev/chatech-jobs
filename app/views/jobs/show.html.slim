@@ -1,5 +1,4 @@
 #job.job-posting
-  = link_to 'Back', root_path, class: 'hero-content'
   .job-posting__header
     h1.job-title=@job.title
     span.job-posting-date=@job.posted_at
@@ -8,7 +7,6 @@
   .job-posting__description
     div==markdown @job.description
 
-.side-bar
   .how-to-apply
     h1 How to apply
     ==markdown @job.how_to_apply

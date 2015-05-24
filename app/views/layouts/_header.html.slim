@@ -8,5 +8,5 @@ header.header
 
     .actions
       / = link_to "Post a Job", "#", class: "btn"
-
-  .header__border
+  - if content_for? :header
+    = yield :header

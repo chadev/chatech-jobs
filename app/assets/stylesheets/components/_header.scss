@@ -1,7 +1,10 @@
 .header {
   flex: none;
-  background: $dark-grey;
+  background: $brand-color;
+  color: white;
   display: block;
+  min-height: 12px;
+  border-bottom: 8px solid $dark-grey;
 
   .banner {
     display: flex;
@@ -16,7 +19,7 @@
 
       .logo {
         margin: 0;
-        color: $light-grey;
+        color: white;
         font-size: 26px;
 
         &--accent {
@@ -34,14 +37,22 @@
       display: flex;
     }
   }
-}
 
-.header__border {
-  flex: none;
-  background: $light-blue;
-  min-height: 12px;
+  .hero {
+    max-width: $main-content-width;
+    margin: 0 auto;
+    text-align: center;
 
-  @media (min-width: $large-screen) {
-    min-height: 188px;
+    h1 {
+      padding: 0;
+      font-size: 42px;
+      font-weight: 100;
+
+      @media screen and (min-width: $large-screen) {
+        padding: 50px;
+        font-size: 54px;
+        font-weight: 100;
+      }
+    }
   }
 }

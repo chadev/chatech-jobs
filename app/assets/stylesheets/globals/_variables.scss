@@ -1,21 +1,24 @@
 // Colors
-$dark-grey: #363E45;
+// $dark-grey: #363E45;
+$dark-grey: #141c22;
 $light-grey: #BECED9;
 $accent-dark-grey: #76848F;
 $light-blue: #549DD5;
-$green: #839A72;
-$medium-grey: #A6AEB9;
 $white: #F9FAFB;
-$main-background: rgba(147,128,108,.1);
+
+// Site colors
+$main-background: $white;
+$brand-color: #3F51B5;
 
 $base-font-color: $dark-grey;
 
 // Sizes
-$main-content-width: 940px;
+$main-content-width: 780px;
+// $main-content-width: 940px;
 
 // Breaks
 $large-screen: 960px;
 
 // Typography
-$base-font-size: 14px;
+$base-font-size: 18px;
 $base-line-height: 1.55;

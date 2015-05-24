@@ -11,11 +11,18 @@
   }
 
   &:hover {
-    background: rgba(224, 243, 255, 0.59);
+    a {
+      color: $brand-color;
+    }
+  }
+
+  a {
+    transition-property: color 0.3s;
   }
 
   @media screen and (min-width: $large-screen) {
-    padding: 12px 26px;
+    padding: 12px 0;
+    margin: 10px 0;
   }
 
   &__info {
@@ -31,8 +38,9 @@
   }
 
   &__description {
+    font-size: 24px;
     font-weight: bold;
-    color: $light-blue;
+    color: $dark-grey;
   }
 
   &__source {
@@ -41,25 +49,24 @@
     flex: 0 1 50%;
 
     &__company {
-      color: $accent-dark-grey;
-      font-weight: bold;
+      color: $dark-grey;
+      // font-weight: bold;
       margin: 3px 0;
       text-decoration: none;
-      text-transform: uppercase;
     }
   }
 
   &__posted-on
   {
-    color: $accent-dark-grey;
+    color: $dark-grey;
     align-self: flex-end;
     margin: 0;
-    font-weight: bold;
+    // font-weight: bold;
   }
 
   &__availability {
-    color: $green;
-    font-weight: bold;
-    margin: 3px 44px;
+    color: $accent-dark-grey;
+    // font-weight: bold;
+    margin: 3px 10px;
   }
 }

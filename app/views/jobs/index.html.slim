@@ -1,5 +1,8 @@
+- content_for :header do
+  .hero
+    h1 Find a great job in Chattanooga
+
 .job-posting
-  h1.hero-content Chadev + Jobs
   - @jobs.each do |job|
     .job
       .job__info
@@ -9,6 +12,3 @@
           p.job__availability=job.availability
       .job__meta
         p.job__posted-on=job.posted_at
-
-.side-bar
-  div Social Links Go Here

@@ -1,11 +1,9 @@
 .job-posting {
   $padding: 20px;
 
-  @include box;
-  @include hover-over-top;
-
   margin-bottom: 8px;
   flex: 0 0 100%;
+  margin-top: 24px;
 
   @media screen and (min-width: $large-screen) {
     flex: 1;
@@ -13,7 +11,7 @@
   }
 
   &__header {
-    padding: $padding;
+    padding: $padding 0;
     border-bottom: 1px solid #ccc;
 
     .job-title {
@@ -29,12 +27,17 @@
 
     .job-availability {
       margin-left: 18px;
-      color: $green;
       font-weight: bold;
+      color: $accent-dark-grey;
     }
   }
 
   &__description {
-    padding: $padding;
+    padding: $padding 0;
+  }
+
+  .how-to-apply {
+    border-top: 1px solid $light-grey;
+    padding: $padding 0;
   }
 }
