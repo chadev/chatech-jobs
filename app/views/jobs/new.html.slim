@@ -1,16 +1,34 @@
-#new-job.new-job-posting
+#new-job.job-posting
+  .job-posting__header
+    h1.form__title Create your job listing
+    p
+      | Your job will go live immediately and be listed for 30 days.
+        Listings are free for all Chattanooga Companies.
 
-= form_for @job, url: jobs_path do |f|
-  = f.label :title, 'Job Title'
-  = f.text_field :title, placeholder: 'Job Title'
+  = form_for @job, url: jobs_path, html: { class: 'form' } do |f|
 
-  = f.label :company, 'Company Name'
-  = f.text_field :company, placeholder: 'Company Name'
+    .field
+      = f.label :title, 'Job Title'
+      = f.text_field :title, placeholder: 'Job Title', tabindex: 1
 
-  = f.label :description, 'Job Description'
-  = f.text_area :description, placeholder: 'Job Description'
+    .field
+      = f.label :company, 'Company Name'
+      = f.text_field :company, placeholder: 'Company Name', tabindex: 2
 
-  = f.label :how_to_apply, 'How to apply'
-  = f.text_area :how_to_apply, placeholder: 'How to apply'
+    .field
+      = f.label :description do
+        ' Job Description
+        span.markdown
+          |   Formatted with
+          a< href="http://daringfireball.net/projects/markdown/syntax" Markdown
+      = f.text_area :description, placeholder: 'Job Description', tabindex: 3
 
-  = f.submit 'Submit Job', class: 'btn'
+    .field
+      = f.label :how_to_apply do
+        ' How to apply
+        span.markdown
+          |   Formatted with
+          a< href="http://daringfireball.net/projects/markdown/syntax" Markdown
+      = f.text_area :how_to_apply, placeholder: 'How to apply', tabindex: 4
+
+    = f.submit 'Submit Job', class: 'btn', tabindex: 5

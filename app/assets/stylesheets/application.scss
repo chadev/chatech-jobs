@@ -1,10 +1,10 @@
 @import "globals/variables";
+@import "globals/mixins";
 @import "globals/fonts";
 @import "globals/base";
 @import "globals/links";
 @import "globals/buttons";
-@import "globals/inputs";
-@import "globals/mixins";
+@import "globals/forms";
 
 @import "components/alerts";
 @import "components/header";
