@@ -9,8 +9,12 @@ class JobsController < ApplicationController
 
   def create
     @job = JobPosting.new(job_params)
-    @job.save
-    redirect_to job_path(@job)
+
+    if @job.save
+      redirect_to job_path(@job), notice: "Your job listing has been posted."
+    else
+      render :new
+   end
   end
 
   def new

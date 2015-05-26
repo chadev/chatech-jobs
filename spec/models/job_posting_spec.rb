@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe JobPosting, type: :model do
+
+  it { should validate_presence_of :title }
+  it { should validate_presence_of :company }
+  it { should validate_presence_of :description }
+  it { should validate_presence_of :how_to_apply }
+
   describe ".current_jobs" do
     it "should only return jobs created in the last 90 days" do
       old_job = create(:job_posting, created_at: Date.current - 91.days)

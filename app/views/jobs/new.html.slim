@@ -6,6 +6,7 @@
         Listings are free for all Chattanooga Companies.
 
   = form_for @job, url: jobs_path, html: { class: 'form' } do |f|
+    = render 'shared/error_messages', target: @job
 
     .field
       = f.label :title, 'Job Title'

@@ -1,4 +1,9 @@
 class JobPosting < ActiveRecord::Base
+  validates :title, presence: true
+  validates :company, presence: true
+  validates :description, presence: true
+  validates :how_to_apply, presence: true
+
   def self.current_jobs
     current_dates = 90.days.ago..Date.current.end_of_day
     where(created_at: current_dates).order(created_at: :desc)

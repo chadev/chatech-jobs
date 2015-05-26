@@ -61,7 +61,7 @@
                   box-shadow .1s ease,
                   border-color .1s ease;
     }
-    
+
     textarea {
       height: 12em;
       min-height: 8em;
@@ -82,5 +82,45 @@
       }
     }
 
+    label,
+    input[type=text],
+    textarea {
+      transition: color 0.1s ease,
+                  background 0.3s ease;
+      @include placeholder {
+        transition: color 0.3s ease;
+      }
+    }
+
+    .field_with_errors {
+      label,
+      input[type=text],
+      textarea {
+        color: #d95c5c;
+
+        @include placeholder {
+          color: rgba(217, 92, 92, 0.63);
+        }
+      }
+
+      input[type=text]:focus,
+      textarea:focus {
+        @include placeholder {
+          color: #d95c5c;
+        }
+      }
+
+      input[type=text],
+      textarea {
+        background: #fff0f0;
+        border-color: #dbb1b1;
+        border-radius: 0 $border-radius $border-radius 0;
+        box-shadow: 2px 0 0 0 #d95c5c inset;
+      }
+
+      label .markdown {
+        color: $base-font-color;
+      }
+    }
   }
 }
