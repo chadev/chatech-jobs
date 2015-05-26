@@ -1,0 +1,6 @@
+- if target.errors.any?
+  #errorExplanation.alert.alert-error
+    h2= "There are #{pluralize(target.errors.count, 'error')} in your job listing"
+    ul
+      - target.errors.full_messages.each do |msg|
+        li= msg

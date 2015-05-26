@@ -5,15 +5,16 @@
   flex: 0 0 100%;
   margin-top: 24px;
 
-  @media screen and (min-width: $large-screen) {
-    flex: 1;
-    position: relative;
-  }
-
   &__header {
     padding: $padding 0;
     border-bottom: 1px solid #ccc;
 
+    p {
+      margin-bottom: 0;
+    }
+
+
+    .job-company,
     .job-title {
       margin: 0;
     }
@@ -30,6 +31,11 @@
       font-weight: bold;
       color: $accent-dark-grey;
     }
+  }
+
+  .form {
+    margin-top: 20px;
+    margin-bottom: 60px;
   }
 
   &__description {

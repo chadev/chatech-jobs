@@ -1,0 +1,127 @@
+.form {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    text-align: center;
+  }
+
+  .btn {
+    max-width: 200px;
+  }
+
+  .field {
+    flex: 1;
+
+    $border-radius: 2px;
+    $padding: 10px 14px;
+    $label-size: 14px;
+    $input-size: 14px;
+
+    margin: 10px 0;
+
+    label {
+      font-size: 14px;
+      font-weight: bold;
+      display: block;
+      padding-bottom: 3px;
+    }
+
+    .markdown {
+      font-weight: 500;
+      font-size: 12px;
+      float: right;
+
+      a {
+        font-weight: 700;
+      }
+    }
+
+    input[type=text],
+    textarea {
+      color: rgba(0,0,0,.8);
+      font-size: $input-size;
+      line-height: 1.2857;
+      margin: 0;
+      outline: 0;
+      width: 100%;
+      padding: $padding;
+      background: #fff;
+      border: 1px solid rgba(39,41,43,.15);
+      box-shadow: 0 0 0 0 transparent inset;
+      border-radius: $border-radius;
+      tap-highlight-color: rgba(255,255,255,0);
+      -webkit-appearance: none;
+      -webkit-transition: background-color .1s ease,
+                          color .1s ease,
+                          box-shadow .1s ease,
+                          border-color .1s ease;
+      transition: background-color .1s ease,
+                  color .1s ease,
+                  box-shadow .1s ease,
+                  border-color .1s ease;
+    }
+
+    textarea {
+      height: 12em;
+      min-height: 8em;
+      max-height: 24em;
+      resize: vertical;
+    }
+
+    input[type=text]:focus,
+    textarea:focus {
+      color: rgba(0,0,0,.85);
+      border-color: rgba(39,41,43,.3);
+      border-radius: 0 $border-radius $border-radius 0;
+      background: #fff;
+      box-shadow: 2px 0 0 0 $brand-color inset;
+
+      @include placeholder {
+        color: rgba(0,0,0,.85);
+      }
+    }
+
+    label,
+    input[type=text],
+    textarea {
+      transition: color 0.1s ease,
+                  background 0.3s ease;
+      @include placeholder {
+        transition: color 0.3s ease;
+      }
+    }
+
+    .field_with_errors {
+      label,
+      input[type=text],
+      textarea {
+        color: #d95c5c;
+
+        @include placeholder {
+          color: rgba(217, 92, 92, 0.63);
+        }
+      }
+
+      input[type=text]:focus,
+      textarea:focus {
+        @include placeholder {
+          color: #d95c5c;
+        }
+      }
+
+      input[type=text],
+      textarea {
+        background: #fff0f0;
+        border-color: #dbb1b1;
+        border-radius: 0 $border-radius $border-radius 0;
+        box-shadow: 2px 0 0 0 #d95c5c inset;
+      }
+
+      label .markdown {
+        color: $base-font-color;
+      }
+    }
+  }
+}
