@@ -1,6 +1,5 @@
 ChatechJobs::Application.routes.draw do
-
-  resources :jobs, :only => [:show]
+  resources :jobs, :only => [:show, :create, :new]
 
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

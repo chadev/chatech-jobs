@@ -1,0 +1,16 @@
+#new-job.new-job-posting
+
+= form_for @job, url: jobs_path do |f|
+  = f.label :title, 'Job Title'
+  = f.text_field :title, placeholder: 'Job Title'
+
+  = f.label :company, 'Company Name'
+  = f.text_field :company, placeholder: 'Company Name'
+
+  = f.label :description, 'Job Description'
+  = f.text_area :description, placeholder: 'Job Description'
+
+  = f.label :how_to_apply, 'How to apply'
+  = f.text_area :how_to_apply, placeholder: 'How to apply'
+
+  = f.submit 'Submit Job', class: 'btn'
