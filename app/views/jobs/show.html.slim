@@ -4,6 +4,9 @@
     h1.job-title=@job.title
     span.job-posting-date=@job.posted_at
     span.job-availability=@job.availability
+    .job-share=mail_to "", "Share this job", 
+      {subject: "[Chadev+Jobs] #{@job.title}", 
+        body: "Here is a job I thought you might be interested in. <br/><br/> #{job_url(@job)}"}
 
   .job-posting__description
     div==markdown @job.description
