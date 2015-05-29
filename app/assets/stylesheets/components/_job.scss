@@ -1,7 +1,7 @@
 .job {
   $border-size: 4px;
 
-  padding: 8px 5px;
+  padding: 20px 0px 20px 0;
   display: flex;
   transition: all .1s ease-in-out;
   border-bottom: 1px solid #ddd;
@@ -34,7 +34,7 @@
     align-items: center;
     flex: 0 1 30%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   &__description {
@@ -50,7 +50,6 @@
 
     &__company {
       color: $dark-grey;
-      // font-weight: bold;
       margin: 3px 0;
       text-decoration: none;
     }
@@ -61,13 +60,15 @@
     color: $dark-grey;
     align-self: flex-end;
     margin: 0;
-    float: right;
-    // font-weight: bold;
+    font-size: 14px;
+
+    @media screen and (min-width: $large-screen) {
+      font-size: 18px;
+    }
   }
 
   &__availability {
     color: $accent-dark-grey;
-    // font-weight: bold;
     margin: 3px 10px;
   }
 }
