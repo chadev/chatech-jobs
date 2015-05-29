@@ -1,0 +1,13 @@
+#new-job {
+  padding: 0 10px;
+
+  .btn {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    .btn {
+      max-width: 200px;
+    }
+  }
+}

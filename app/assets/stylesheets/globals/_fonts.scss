@@ -8,4 +8,8 @@ body {
 p {
   font-size: $base-font-size;
   line-height: $base-font-size * $base-line-height;
+
+  @media screen and (min-width: $large-screen) {
+    font-size: $base-font-size;
+  }
 }
