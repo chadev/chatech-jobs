@@ -9,7 +9,7 @@ RSpec.describe JobPosting, type: :model do
 
   describe ".current_jobs" do
     it "should only return jobs created in the last 90 days" do
-      old_job = create(:job_posting, created_at: Date.current - 91.days)
+      old_job = create(:job_posting, created_at: Date.current - 31.days)
       new_job = create(:job_posting)
       expect(JobPosting.current_jobs).to eq [new_job]
     end
