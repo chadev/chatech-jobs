@@ -3,6 +3,12 @@
     h1 Find a great job in Chattanooga
 
 .job-posting#job-list
+  = search_form_for @q, url: root_path, html: { class: 'form' }, method: :get do |form|
+    .field
+      = form.search_field :title_or_company_cont, placeholder: 'Search by Title or Company Name'
+
+    = form.submit class: 'btn'
+
   - @jobs.each do |job|
     .job
       .job__info
