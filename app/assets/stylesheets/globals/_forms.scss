@@ -50,6 +50,7 @@
     }
 
     input[type=text],
+    input[type=search],
     textarea {
       width: 100%;
       padding: $padding;
@@ -78,6 +79,7 @@
     }
 
     input[type=text]:focus,
+    input[type=search]:focus,
     textarea:focus {
       color: rgba(0, 0, 0, 0.85);
       background: #fff;
@@ -92,6 +94,7 @@
 
     label,
     input[type=text],
+    input[type=search],
     textarea {
       transition: color 0.1s ease,
                   background 0.3s ease;

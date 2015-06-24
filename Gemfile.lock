@@ -366,6 +366,7 @@ DEPENDENCIES
   rack-timeout
   rails (~> 4.2.1)
   rails_stdout_logging
+  ransack (~> 1.6.6)
   rb-fsevent
   redcarpet
   rspec-rails
@@ -379,4 +380,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   1.10.2
+   1.10.5
