@@ -26,6 +26,8 @@ gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'redcarpet'
 gem 'autoprefixer-rails'
 
+gem 'ransack', '~> 1.6.6'
+
 group :production, :acceptance do
   gem 'rack-timeout'
   gem 'rails_stdout_logging'
