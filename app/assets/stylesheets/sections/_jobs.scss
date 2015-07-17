@@ -1,3 +1,24 @@
 #job-list {
   padding: 0 10px;
+
+  .job-search {
+    display: flex;
+    flex-direction: row;
+    .field {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      flex: 1;
+      display: flex;
+
+      input[type=search] {
+        flex: 4;
+      }
+    }
+
+    input[type=submit] {
+      max-height: 40px;
+    }
+  }
+
 }
