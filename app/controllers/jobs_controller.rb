@@ -25,7 +25,6 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.permit(:search)
     params.require(:job_posting).permit(
       :company,
       :title,
