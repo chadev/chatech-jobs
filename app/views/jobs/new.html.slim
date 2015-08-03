@@ -17,6 +17,16 @@
       = f.text_field :company, placeholder: 'Company Name', tabindex: 2
 
     .field
+      = f.label :availability, 'Job Type'
+
+      label.radio-label
+        = f.radio_button :full_time, true, class: 'radio-field'
+        | Full Time
+      label.radio-label
+        = f.radio_button :full_time, false, class: 'radio-field'
+        | Part Time / Contract
+
+    .field
       = f.label :description do
         ' Job Description
         span.markdown

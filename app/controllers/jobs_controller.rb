@@ -28,7 +28,8 @@ class JobsController < ApplicationController
       :company,
       :title,
       :description,
-      :how_to_apply
+      :how_to_apply,
+      :full_time
     )
   end
 end

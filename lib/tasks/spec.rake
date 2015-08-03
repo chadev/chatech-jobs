@@ -19,4 +19,4 @@ end
 Rake::Task['spec'].clear_actions
 
 desc 'Runs all specs'
-task spec: ['spec:without_features', 'spec:features', 'spec:javascripts']
+task spec: ['spec:without_features', 'spec:features']
