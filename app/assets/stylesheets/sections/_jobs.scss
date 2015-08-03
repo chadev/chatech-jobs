@@ -4,20 +4,22 @@
   .job-search {
     display: flex;
     flex-direction: row;
+
     .field {
+      display: flex;
       margin-top: 0;
       margin-bottom: 0;
-
       flex: 1;
-      display: flex;
 
       input[type=search] {
-        flex: 4;
+        border-right: 0;
       }
     }
 
     input[type=submit] {
       max-height: 40px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 
