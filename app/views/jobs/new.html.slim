@@ -11,18 +11,21 @@
     .field
       = f.label :title, 'Job Title'
       = f.text_field :title, placeholder: 'Job Title', tabindex: 1
-    
+
     .field
       = f.label :company, 'Company Name'
       = f.text_field :company, placeholder: 'Company Name', tabindex: 2
-    
+
     .field
       = f.label :availability, 'Job Type'
-      = f.label :availability, 'Full Time', value: 'true'
-      = f.radio_button :availabiltity, true, checked: true
-      = f.label :availability, 'Part Time / Contract', value: 'false'
-      = f.radio_button :availability, false
-    
+
+      label.radio-label
+        = f.radio_button :full_time, true, class: 'radio-field'
+        | Full Time
+      label.radio-label
+        = f.radio_button :full_time, false, class: 'radio-field'
+        | Part Time / Contract
+
     .field
       = f.label :description do
         ' Job Description

@@ -14,6 +14,7 @@ describe "Job Creation" do
     let(:description) { 'Description with *markdown*' }
     let(:parsed_description) { 'Description with <em>markdown</em>' }
     let(:how_to_apply) { 'Send us an email' }
+    let(:availability) { 'Part Time / Contract'}
 
     context "with invalid information" do
       let(:title) { '' }
@@ -46,6 +47,7 @@ describe "Job Creation" do
         expect(page).to have_content(company)
         expect(page.html).to include(parsed_description)
         expect(page).to have_content(how_to_apply)
+        expect(page).to have_content(availability)
       end
     end
   end
@@ -57,6 +59,8 @@ describe "Job Creation" do
     fill_in 'Company Name', with: company
     fill_in 'Job Description', with: description
     fill_in 'How to apply', with: how_to_apply
+
+    choose availability
 
     click_button 'Submit Job'
   end
