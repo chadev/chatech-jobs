@@ -1,4 +1,6 @@
 language: ruby
+env: 
+  - CODECLIMATE_REPO_TOKEN=906addb1ac7dde85aaafa4753f445781adf80069c2f833c3e0d67bd6631fe3bc
 
 before_script: rake db:test:prepare
 script: rake && rake db:sample_data

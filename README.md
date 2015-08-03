@@ -1,6 +1,9 @@
 # Chatech Jobs
 
 [![Build Status](https://travis-ci.org/chadev/chatech-jobs.svg?branch=master)](https://travis-ci.org/chadev/chatech-jobs)
+[![Code Climate](https://codeclimate.com/github/chadev/chatech-jobs/badges/gpa.svg)](https://codeclimate.com/github/chadev/chatech-jobs)
+[![Coverage Status](https://coveralls.io/repos/chadev/chatech-jobs/badge.svg?branch=master&service=github)](https://coveralls.io/github/chadev/chatech-jobs?branch=master)
+[![Dependency Status](https://gemnasium.com/chadev/chatech-jobs.svg)](https://gemnasium.com/chadev/chatech-jobs)
 
 Generated with [Raygun](https://github.com/carbonfive/raygun).
 
