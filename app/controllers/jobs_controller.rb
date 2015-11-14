@@ -11,13 +11,20 @@ class JobsController < ApplicationController
   def create
     @job = JobPosting.new(job_params)
 
-    @job.spam?
-      redirect_to new_job_path, alert: "Your job listing was automatically rejected."
-      return
-    end
+    # Collect and cache information required for future moderation actions
+    @job.attributes = {
+      user_ip: request.env['REMOTE_ADDR'],
+      user_agent: request.env['HTTP_USER_AGENT'],
+      referrer: request.env['HTTP_REFERER']
+    }
+    @job.akismet_spam = @job.spam?
 
     if @job.save
-      redirect_to job_path(@job), notice: "Your job listing has been posted."
+      if @job.akismet_spam
+        redirect_to job_path(@job), alert: "Your job listing has been posted, but requires moderator approval."
+      else
+        redirect_to job_path(@job), notice: "Your job listing has been posted."
+      end
     else
       render :new
    end

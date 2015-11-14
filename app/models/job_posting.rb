@@ -10,7 +10,7 @@ class JobPosting < ActiveRecord::Base
 
   def self.current_jobs
     current_dates = 30.days.ago.beginning_of_day..Date.current.end_of_day
-    where(created_at: current_dates).order(created_at: :desc)
+    where(created_at: current_dates, akismet_spam: false).order(created_at: :desc)
   end
 
   def posted_at
