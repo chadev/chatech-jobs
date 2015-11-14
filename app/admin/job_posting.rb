@@ -7,6 +7,24 @@ ActiveAdmin.register JobPosting do
     :company
   )
 
+  member_action :spam, method: :put do
+    resource.spam!
+    redirect_to resource_path, notice: 'Marked as spam!'
+  end
+
+  member_action :ham, method: :put do
+    resource.ham!
+    redirect_to resource_path, notice: 'Marked as ham!'
+  end
+
+  action_item :view, only: :show do
+    link_to 'Mark Spam', spam_admin_job_posting_path, method: :put
+  end
+
+  action_item :view, only: :show do
+    link_to 'Mark Ham', ham_admin_job_posting_path, method: :put
+  end
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #

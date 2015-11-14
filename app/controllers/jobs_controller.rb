@@ -11,6 +11,11 @@ class JobsController < ApplicationController
   def create
     @job = JobPosting.new(job_params)
 
+    @job.spam?
+      redirect_to new_job_path, alert: "Your job listing was automatically rejected."
+      return
+    end
+
     if @job.save
       redirect_to job_path(@job), notice: "Your job listing has been posted."
     else

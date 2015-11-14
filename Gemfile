@@ -27,6 +27,7 @@ gem 'redcarpet'
 gem 'autoprefixer-rails'
 
 gem 'ransack', '~> 1.6.6'
+gem 'rakismet', '~> 1.5.1'
 
 group :production, :acceptance do
   gem 'rack-timeout'
