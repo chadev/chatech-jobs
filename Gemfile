@@ -27,6 +27,7 @@ gem 'redcarpet'
 gem 'autoprefixer-rails'
 
 gem 'ransack', '~> 1.6.6'
+gem 'rakismet', '~> 1.5.1'
 
 group :production, :acceptance do
   gem 'rack-timeout'
@@ -48,6 +49,7 @@ group :test do
 end
 
 group :test, :development do
+  gem 'dotenv-rails', '~> 2.0.2'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'jasmine-rails'
@@ -57,16 +59,16 @@ group :test, :development do
 end
 
 group :development do
-  gem 'spring'
-  gem 'spring-commands-rspec'
-  gem 'foreman'
-  gem 'launchy'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'quiet_assets'
-  gem 'guard', '~> 2'
-  gem 'guard-rspec'
-  gem 'guard-livereload'
-  gem 'rb-fsevent'
+  gem 'foreman'
   gem 'growl'
+  gem 'guard-livereload'
+  gem 'guard-rspec'
+  gem 'guard', '~> 2'
+  gem 'launchy'
+  gem 'quiet_assets'
+  gem 'rb-fsevent'
+  gem 'spring-commands-rspec'
+  gem 'spring'
 end

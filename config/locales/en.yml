@@ -20,4 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: 'Hello world'
+
+  admin:
+    submit_spam: 'Successfully marked as spam!'
+    submit_ham: 'Successfully reported false positive!'
+    submit_spam_hint: "Report missed spam:\nThis job posting was not flagged as spam, but should have been."
+    submit_ham_hint: "Report false positive:\nThis job posting was flagged as spam, but should not have been."
+
+  job_listing:
+    posted: 'Your job listing has been posted.'
+    posted_moderation: 'Your job listing has been posted, but requires moderator approval.'
