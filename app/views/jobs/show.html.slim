@@ -1,16 +1,24 @@
-#job.job-posting
-  .job-posting__header
-    h2.job-company=@job.company
-    h1.job-title=@job.title
-    span.job-posting-date=@job.posted_at
-    span.job-availability=@job.availability
-    .job-share=mail_to "", "Share this job", 
-      {subject: "[Chadev+Jobs] #{@job.title}", 
-        body: "Here is a job I thought you might be interested in. <br/><br/> #{job_url(@job)}"}
+- if @job.akismet_spam
 
-  .job-posting__description
-    div==markdown @job.description
+  #job.job-posting
+    .job-posting__header
+      | This job posting is awaiting moderation.
 
-  .how-to-apply
-    h1 How to apply
-    ==markdown @job.how_to_apply
+- else
+
+  #job.job-posting
+    .job-posting__header
+      h2.job-company=@job.company
+      h1.job-title=@job.title
+      span.job-posting-date=@job.posted_at
+      span.job-availability=@job.availability
+      .job-share=mail_to "", "Share this job",
+        {subject: "[Chadev+Jobs] #{@job.title}",
+          body: "Here is a job I thought you might be interested in. <br/><br/> #{job_url(@job)}"}
+
+    .job-posting__description
+      div==markdown @job.description
+
+    .how-to-apply
+      h1 How to apply
+      ==markdown @job.how_to_apply

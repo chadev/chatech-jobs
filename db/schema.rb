@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150624235531) do
+ActiveRecord::Schema.define(version: 20151114222751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -36,9 +37,13 @@ ActiveRecord::Schema.define(version: 20150624235531) do
     t.text     "description"
     t.text     "how_to_apply"
     t.boolean  "full_time",    default: true
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "company"
+    t.boolean  "akismet_spam", default: false
+    t.string   "user_ip"
+    t.string   "user_agent"
+    t.string   "referrer"
   end
 
   add_index "job_postings", ["company"], name: "index_job_postings_on_company", using: :btree
