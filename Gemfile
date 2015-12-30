@@ -38,6 +38,8 @@ group :test do
   gem 'fuubar'
   gem 'capybara'
   #gem 'capybara-email'
+  gem 'codeclimate-test-reporter', require: false
+  gem 'coveralls', require: false
   gem 'poltergeist'
   #gem 'timecop'
   gem 'database_cleaner'

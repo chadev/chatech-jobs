@@ -1,6 +1,7 @@
 # Coverage must be enabled before the application is loaded.
 if ENV['COVERAGE']
   require 'simplecov'
+  require 'coveralls'
 
   # Writes the coverage stat to a file to be used by Cane.
   class SimpleCov::Formatter::QualityFormatter
@@ -11,7 +12,11 @@ if ENV['COVERAGE']
       end
     end
   end
-  SimpleCov.formatter = SimpleCov::Formatter::QualityFormatter
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+    SimpleCov::Formatter::QualityFormatter,
+    CodeClimate::TestReporter::Formatter,
+    Coveralls::SimpleCov::Formatter
+  ]
 
   SimpleCov.start do
     add_filter '/spec/'
