@@ -22,7 +22,15 @@ To run the specs or fire up the server, be sure you have these installed (and ru
 
 ### First Time Setup
 
-After cloning, run [./bin/setup](bin/setup) to install missing gems and prepare the database.
+After cloning,
+
+```bash
+# set up your environment; edit .env where appropriate
+$ cp .env.example .env
+
+# install missing gems and prepare the database
+$ bin/setup
+```
 
 Note, ```rake db:sample_data``` loads a small set of data for development. Check out
 [db/sample_data.rb](db/sample_data.rb) for details.
@@ -35,7 +43,7 @@ To run all Ruby and Javascript specs.
 
 Note: ```./bin/rake``` runs the springified version of rake (there's a ```./bin/rspec``` and ```./bin/rails``` too). You
 can add ```./bin``` to your PATH too, then you'll always use the springified bins when they exist. See
-[rails/spring](https://github.com/rails/spring) for additional information. 
+[rails/spring](https://github.com/rails/spring) for additional information.
 
 ### Running the Application Locally
 

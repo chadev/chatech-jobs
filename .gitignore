@@ -19,3 +19,4 @@
 /public/assets
 
 *.sublime*
+.env
