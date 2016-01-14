@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def markdown(text)
-    options = { autolink: true, link_attributes: {rel: 'nofollow'} }
+    options = { autolink: true, link_attributes: { rel: 'nofollow' } }
     renderer = Redcarpet::Render::HTML.new(options)
     Redcarpet::Markdown.new(renderer).render(text)
   end
