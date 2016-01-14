@@ -123,6 +123,8 @@ Several common features and operational parameters can be set using environment 
 **Required**
 
 * ```SECRET_KEY_BASE``` - Secret key base for verfying signed cookies. Should be 30+ random characters and secret!
+* ```RAKISMET_URL``` - Anti-spam: Your "site" URL, such as `http://yourdomain.com/`. Required by Akismet.
+* ```RAKISMET_KEY``` - Anti-spam: Your Akismet API key. You can find this in your "Account Overview" section. https://akismet.com/account/
 
 **Optional**
 
