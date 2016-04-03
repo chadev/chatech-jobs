@@ -8,7 +8,7 @@ module ApplicationHelper
     # Sanitize HTML
     sanitize_config = Sanitize::Config.merge(
       Sanitize::Config::RELAXED,
-      add_attributes: { 'a' => { 'rel' => 'nofollow' } }
+      add_attributes: { 'a': { 'rel': 'nofollow' } }
     )
     Sanitize.fragment(html, sanitize_config)
   end
