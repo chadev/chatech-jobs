@@ -23,7 +23,8 @@ gem 'awesome_print'
 
 gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre1'
-gem 'redcarpet'
+gem 'redcarpet', '~> 3.3.4'
+gem 'sanitize', '~> 4.0.1'
 gem 'autoprefixer-rails'
 
 gem 'ransack', '~> 1.6.6'

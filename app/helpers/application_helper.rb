@@ -1,9 +1,16 @@
 module ApplicationHelper
 
   def markdown(text)
-    options = { autolink: true, link_attributes: { rel: 'nofollow' } }
-    renderer = Redcarpet::Render::HTML.new(options)
-    Redcarpet::Markdown.new(renderer).render(text)
+    # Render markdown
+    renderer = Redcarpet::Render::HTML.new({ autolink: true })
+    html = Redcarpet::Markdown.new(renderer).render(text)
+
+    # Sanitize HTML
+    sanitize_config = Sanitize::Config.merge(
+      Sanitize::Config::RELAXED,
+      add_attributes: { 'a' => { 'rel' => 'nofollow' } }
+    )
+    Sanitize.fragment(html, sanitize_config)
   end
 
   # create text with an icon to the left for bootstrap menus and buttons
