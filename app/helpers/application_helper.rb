@@ -2,7 +2,7 @@ module ApplicationHelper
 
   def markdown(text)
     # Render markdown
-    renderer = Redcarpet::Render::HTML.new({ autolink: true })
+    renderer = Redcarpet::Render::HTML.new(autolink: true)
     html = Redcarpet::Markdown.new(renderer).render(text)
 
     # Sanitize HTML
