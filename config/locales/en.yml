@@ -31,3 +31,4 @@ en:
   job_listing:
     posted: 'Your job listing has been posted.'
     posted_moderation: 'Your job listing has been posted, but requires moderator approval.'
+    sorry: 'Sorry, but we are unable to accept your job posting at this time. Please try again later.'

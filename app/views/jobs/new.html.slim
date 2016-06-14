@@ -8,6 +8,10 @@
   = form_for @job, url: jobs_path, html: { class: 'form' } do |f|
     = render 'shared/error_messages', target: @job
 
+    .field.sr-only
+      = f.label :email, 'Please leave blank'
+      = f.text_field :email, placeholder: 'Email', tabindex: -1, value: ''
+
     .field
       = f.label :title, 'Job Title'
       = f.text_field :title, placeholder: 'Job Title', tabindex: 1

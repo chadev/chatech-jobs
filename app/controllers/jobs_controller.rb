@@ -11,6 +11,11 @@ class JobsController < ApplicationController
   def create
     @job = JobPosting.new(job_params)
 
+    unless @job.email.blank?
+      redirect_to root_path, notice: t('job_listing.sorry')
+      return
+    end
+
     # Collect and cache information required for future moderation actions
     @job.attributes = {
       user_ip: request.env['REMOTE_ADDR'],
@@ -27,7 +32,7 @@ class JobsController < ApplicationController
       end
     else
       render :new
-   end
+    end
   end
 
   def new
@@ -39,10 +44,11 @@ class JobsController < ApplicationController
   def job_params
     params.require(:job_posting).permit(
       :company,
-      :title,
       :description,
+      :email,
+      :full_time,
       :how_to_apply,
-      :full_time
+      :title
     )
   end
 end
