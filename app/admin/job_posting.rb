@@ -12,6 +12,7 @@ ActiveAdmin.register JobPosting do
   )
 
   index do
+    selectable_column
     id_column
     column :company
     column :full_time
@@ -20,6 +21,11 @@ ActiveAdmin.register JobPosting do
     column :created_at
     column 'Is spam?', :akismet_spam
     actions
+  end
+
+  batch_action :destroy, confirm: I18n.t('admin.jobs.confirm_destroy') do |ids|
+    JobPosting.where(id: ids).destroy_all
+    redirect_to collection_path, alert: t('admin.jobs.destroyed')
   end
 
   member_action :spam, method: :put do
@@ -53,17 +59,4 @@ ActiveAdmin.register JobPosting do
       title: t('admin.submit_ham_hint')
     )
   end
-
-  # See permitted parameters documentation:
-  # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
 end

@@ -1,4 +1,5 @@
 class JobPosting < ActiveRecord::Base
+  attr_accessor :email
   validates :title, presence: true
   validates :company, presence: true
   validates :description, presence: true
