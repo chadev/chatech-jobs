@@ -9,7 +9,7 @@ ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
 
 gem 'puma'
 gem 'rack-canonical-host'
-gem 'rails', '~> 4.2.1'
+gem 'rails', '~> 4.2.6'
 gem 'pg'
 
 gem 'slim-rails'
@@ -21,7 +21,7 @@ gem 'uglifier'
 
 gem 'awesome_print'
 
-gem 'devise'
+gem 'devise', '~> 3.5.10'
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'redcarpet', '~> 3.3.4'
 gem 'sanitize', '~> 4.0.1'
