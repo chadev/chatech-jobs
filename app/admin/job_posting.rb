@@ -23,7 +23,7 @@ ActiveAdmin.register JobPosting do
     actions
   end
 
-  batch_action :destroy, confirm: t('admin.jobs.confirm_destroy') do |ids|
+  batch_action :destroy, confirm: I18n.t('admin.jobs.confirm_destroy') do |ids|
     JobPosting.where(id: ids).destroy_all
     redirect_to collection_path, alert: t('admin.jobs.destroyed')
   end
