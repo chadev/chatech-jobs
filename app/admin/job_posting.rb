@@ -23,9 +23,9 @@ ActiveAdmin.register JobPosting do
     actions
   end
 
-  batch_action :destroy, confirm: 'Are you sure you want to delete these job postings? This action cannot be undone.' do |ids|
+  batch_action :destroy, confirm: t('admin.jobs.confirm_destroy') do |ids|
     JobPosting.where(id: ids).destroy_all
-    redirect_to collection_path, alert: 'Destroyed the selected job postings.'
+    redirect_to collection_path, alert: t('admin.jobs.destroyed')
   end
 
   member_action :spam, method: :put do

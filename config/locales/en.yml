@@ -28,6 +28,10 @@ en:
     submit_spam_hint: "Report missed spam:\nThis job posting was not flagged as spam, but should have been."
     submit_ham_hint: "Report false positive:\nThis job posting was flagged as spam, but should not have been."
 
+    jobs:
+      destroyed: 'Successfully destroyed the selected job postings.'
+      confirm_destroy: 'Are you sure you want to delete these job postings? This action cannot be undone.'
+
   job_listing:
     posted: 'Your job listing has been posted.'
     posted_moderation: 'Your job listing has been posted, but requires moderator approval.'
